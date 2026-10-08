@@ -394,21 +394,13 @@ if (contactForm) {
                     "Sending...";
 
                 // Send enquiry to CALFMS backend
-                const response = await fetch(
-                    "http://localhost:3000/api/contact",
-                    {
+               const response = await fetch("http://127.0.0.1:3000/api/contact", {
                         method: "POST",
-
                         headers: {
-                            "Content-Type":
-                                "application/json"
+                            "Content-Type": "application/json"
                         },
-
-                        body: JSON.stringify(
-                            formData
-                        )
-                    }
-                );
+                        body: JSON.stringify(formData)
+                    });
 
                 const result =
                     await response.json();

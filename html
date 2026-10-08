@@ -1,0 +1,886 @@
+#team {
+    padding: 20px 7%;
+    background: #f7f7f5;
+}
+
+
+/* Section heading */
+
+#team > p:first-child {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+    font-weight: 70;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+#team > h2 {
+    max-width: 700px;
+    margin: 0 0 60px;
+
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 0.95;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+
+    color: #111;
+}
+
+
+/* =========================================================
+   TEAM GRID
+========================================================= */
+
+.team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* =========================================================
+   TEAM CARD
+========================================================= */
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    background: #ffffff;
+    border: 1px solid #e5e5e2;
+
+    padding: 5px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+
+/* PHOTO + NAME */
+
+.team-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.team-image {
+    flex: 0 0 180px;
+
+    width: 180px;
+    height: 210px;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+.team-image img {
+    width: 50%;
+    height: 50%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* NAME */
+
+.team-profile-info {
+    flex: 1;
+}
+
+.team-profile-info h3 {
+    margin: 0 0 10px;
+
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 500;
+
+    letter-spacing: -0.03em;
+
+    color: #111;
+}
+
+.team-role {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+
+/* DETAILS BELOW PROFILE */
+
+.team-content {
+    width: 70%;
+
+    padding-left: 100px;
+}
+
+.team-content p:not(.team-role) {
+    max-width: 850px;
+
+    margin: 0 0 18px;
+
+    font-size: 16px;
+    line-height: 1.75;
+
+    color: #555;
+}
+
+
+/* DIVINA - NO PHOTO */
+
+.team-member.no-image .team-profile {
+    min-height: 0;
+}
+
+.team-member.no-image .team-content {
+    padding-left: 3;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .team-member {
+        padding: 25px;
+    }
+
+    .team-profile {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .team-image {
+        flex: 0 0 120px;
+
+        width: 120px;
+        height: 150px;
+    }
+
+    .team-profile-info h3 {
+        font-size: 24px;
+    }
+
+    .team-content {
+        padding-left: 0;
+    }
+
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+   PHOTO + NAME
+========================================================= */
+
+.team-profile {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    margin-bottom: 35px;
+}
+
+
+/* Profile picture */
+
+.team-image {
+    flex: 0 0 145px;
+
+    width: 145px;
+    height: 175px;
+
+    overflow: hidden;
+
+    background: #e9e9e6;
+}
+
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* Name area */
+
+.team-profile-info {
+    flex: 1;
+}
+
+
+.team-profile-info h3 {
+    margin: 0 0 10px;
+
+    font-size: 27px;
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+
+    color: #111;
+}
+
+
+.team-role {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   BIOGRAPHY / DETAILS
+========================================================= */
+
+.team-content {
+    width: 100%;
+}
+
+
+.team-content p:not(.team-role) {
+    margin: 0 0 18px;
+
+    max-width: 600px;
+
+    font-size: 15px;
+    line-height: 1.75;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   PROFILE WITHOUT IMAGE
+   DIVINA
+========================================================= */
+
+.team-member.no-image {
+    justify-content: flex-start;
+
+    min-height: 100%;
+}
+
+
+.team-member.no-image .team-profile {
+    min-height: 175px;
+}
+
+
+.team-member.no-image .team-profile-info {
+    width: 100%;
+}
+
+
+.team-member.no-image h3 {
+    color: #111;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    #team {
+        padding: 90px 5%;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    #team {
+        padding: 75px 6%;
+    }
+
+    #team > h2 {
+        margin-bottom: 40px;
+
+        font-size: 44px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+
+    .team-member {
+        padding: 24px;
+    }
+
+
+    /* Stack photo and name on small screens */
+
+    .team-profile {
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+
+    .team-image {
+        flex: 0 0 110px;
+
+        width: 110px;
+        height: 135px;
+    }
+
+
+    .team-profile-info h3 {
+        font-size: 23px;
+    }
+
+
+    .team-content p:not(.team-role) {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+}
+
+
+
+
+<section id="team">
+
+    <p>THE TEAM</p>
+
+    <h2>Our People</h2>
+
+    <div class="team-grid">
+
+        <!-- AMOS JANAI CHWEYA -->
+        <article class="team-member">
+
+            <div class="team-image">
+                <img
+                    src="../assets/people/person-2.png"
+                    alt="Amos Janai Chweya"
+                >
+            </div>
+
+            <div class="team-content">
+
+                <h3>Amos Janai Chweya</h3>
+
+                <p class="team-role">
+                    Partner
+                </p>
+
+                <p>
+                    Amos is an Advocate of the High Court of Kenya and the firm's founding member. He is in charge of Legal Research, Conveyancing and Commercial Department.
+                </p>
+
+                <p>
+                    His areas of experience include conveyancing and real estate, banking and securities,commercial law, legal research and audit,probate, succession and trusts, civil and criminal litigation, family law, and industrialrelations, unions and employment law.
+                </p>
+
+            </div>
+
+        </article>
+        <!--STACY-->
+        <article class="team-member no-image">
+
+            <div class="team-content">
+
+                <h3>Stacy</h3>
+
+                <p class="team-role">
+                    Role
+                </p>
+
+                <p>
+                    Paragraph
+                </p>
+
+            </div>
+        </article>
+        <!--JANE-->
+        <article class="team-member no-image">
+
+            <div class="team-content">
+
+                <h3>Jane</h3>
+
+                <p class="team-role">
+                    Role
+                </p>
+
+                <p>
+                    Paragraph
+                </p>
+
+            </div>
+        </article>
+    
+        <!-- DIVINA KERUBO -->
+        <article class="team-member no-image">
+
+            <div class="team-content">
+
+                <h3>Divina Kerubo</h3>
+
+                <p class="team-role">
+                    Administrator
+                </p>
+
+                <p>
+                    Divina is the firm's administrator. She holds
+                    a diploma in Certified Public Accounts (CPA)
+                    from Prime College of Accountancy and has
+                    experience in administration, human resource
+                    and accounts.
+                </p>
+
+            </div>
+
+        </article>
+        <!-- VIVIAN -->
+        <article class="team-member no-image">
+
+            <div class="team-content">
+
+                <h3>Vivian</h3>
+
+                <p class="team-role">
+                    Role
+                </p>
+
+                <p>
+                    Paragraph
+                </p>
+
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<section id="practice-areas">
+
+            <p>AREAS OF EXPERTISE & PRACTICE</p>
+
+            <h2>
+                Our Practice Areas
+            </h2>
+
+            <p>
+                Chweya and Associates Advocates offers diverse
+                expertise across major areas of law in Kenya.
+            </p>
+
+
+            <div class="practice-list">
+
+
+                <article>
+
+                    <h3>
+                        Corporate & Commercial Law
+                    </h3>
+
+                    <p>
+                       We provide comprehensive legal counsel for all commercial aspects of your business, allowing you to focus on day-to-day operations while we handle the legal side. Our services span company incorporation, regulatory compliance, mergers and acquisitions, tax advisory, and contract drafting. We advise on complex transactions including sales of shares, businesses, and assets, as well as joint ventures and takeovers. We conduct thorough due diligence investigations and compile reports to protect our corporate clients' interests. Beyond dispute resolution, we proactively identify and eliminate legal risks in your operations, helping your business grow with confidence.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Property & Conveyancing Law
+                    </h3>
+
+                    <p>
+                       As Kenya's construction sector grows, we bring deep expertise in property and conveyancing law to support large-scale projects. We handle the full property lifecycle — from acquisition, development, and due diligence to the preparation and registration of transfers, mortgages, leases, and tenancy agreements. Our team also navigates the regulatory landscape, including land registration, stamp duty, change-of-use approvals, and real estate taxation. When disputes arise, we represent clients in court and through alternative dispute resolution, always weighing each case on its merits for the most realistic outcome.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        General Litigation & ADR
+                    </h3>
+
+                    <p>
+                       Our attorneys provide specialized legal representation across all areas of litigation, combining deep courtroom experience with sharp investigative skills to locate evidence and build compelling cases in our clients' best interests. We handle a wide range of disputes including torts, negligence and personal injury claims, professional liability, bankruptcy, contract disputes, insurance claims, debt recovery, defamation, succession and estate matters, employment disputes, consumer protection, environmental and regulatory issues, intellectual property infringement, and fraud. We also provide urgent interlocutory relief, appellate proceedings, and arbitration services. Every case is evaluated on its merits, and we pursue the most effective path to resolution — whether through negotiation, mediation, or full court proceedings.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Constitutional & Administrative Law
+                    </h3>
+
+                    <p>
+                       Constitutional matters carry profound weight, as they shape the rights and freedoms of every citizen and their interpretations are final — alterable only through formal amendment. Our firm represents clients in bringing constitutional claims, defending against constitutional challenges, advising on constitutional amendments, and challenging the validity of statutes on grounds of unconstitutionality. We also provide expert guidance on the interpretation and application of both constitutional and administrative law, ensuring our clients are protected at every level of governance.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Labour & Employment Law
+                    </h3>
+
+                    <p>
+                        The firm advises clients on all aspects of employment and labour law, from ensuring statutory compliance to representing them in labour court disputes. Services include guidance on termination, retrenchment, and corporate restructurings; drafting employment contracts and union agreements; and advising on terms of service, voluntary retirement schemes, and employee stock options.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Insurance Law
+                    </h3>
+
+                    <p>
+                       
+The firm advises clients on all aspects of insurance law, from policy interpretation and claims disputes to regulatory compliance and contract drafting. Services span representation in arbitration and court proceedings, structuring reinsurance agreements, and guiding corporate and individual clients on risk management, liability allocation, and coverage matters across motor, health, and general insurance.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Family Law
+                    </h3>
+
+                    <p>
+                       The firm represents clients in all family law matters, including divorce, judicial separation, child custody and support, adoption, and domestic violence. Our advocates handle these emotionally complex cases with sensitivity and discretion, prioritizing the protection of clients' rights and their children's best interests.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Taxation & Audit Law
+                    </h3>
+
+                    <p>
+                        Summarized Tax & Audit Law section
+The firm advises on the full spectrum of Kenyan tax law, including transfer pricing, income tax, capital gains, customs, and excise matters. We represent and defend taxpayers during audits, before the Tax Tribunal and High Court, and in criminal tax prosecutions, ensuring their rights are protected at every stage.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Intellectual Property Law(IP Law)
+                    </h3>
+
+                    <p>
+                        The firm advises clients on all aspects of intellectual property law, including the registration, protection, enforcement, and licensing of patents, trademarks, copyrights, trade secrets, and industrial designs. We represent clients in IP infringement disputes, opposition proceedings, and licensing negotiations, and provide strategic guidance on portfolio management, compliance, and commercialization of intangible assets.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Probate, Succession & Trusts
+                    </h3>
+
+                    <p>
+                       The firm advises on all aspects of probate, succession, and trusts, from will drafting and estate administration to challenging succession claims and structuring family trusts. We guide clients through both simple and complex estates, ensuring the deceased's wishes are honoured, assets are preserved, and beneficiaries' rights are fully protected under statutory and customary law.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Banking & Finance Law
+                    </h3>
+
+                    <p>
+                       Summarized Banking & Finance Law article
+                        The firm advises banks, financial institutions, and corporate clients on all aspects of banking and finance law, from structuring debt facilities and perfecting security interests to regulatory compliance, insolvency proceedings, and fintech matters. We ensure that financial transactions are properly structured, legally sound, and fully compliant with applicable regulatory frameworks.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Competition Law
+                    </h3>
+
+                    <p>
+                        Summarized Competition Law section
+The firm provides comprehensive legal services relating to competition matters and the regulatory environment affecting businesses. We advise clients on compliance with competition laws, investigate potential violations, and represent them in disputes before regulatory bodies and courts.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Contracts Law
+                    </h3>
+
+                    <p>
+                        The firm advises clients on all aspects of contract law, from drafting, reviewing, and negotiating commercial agreements to representing them in breach of contract disputes. We ensure that every contractual arrangement is carefully structured to protect our clients' interests, allocate risk appropriately, and provide clear pathways for enforcement.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Notarial Practice
+                    </h3>
+
+                    <p>
+                        Notarial services and preparation and
+                        handling of relevant legal instruments.
+The firm provides comprehensive notarial services, including the preparation, execution, and authentication of legal instruments such as affidavits, powers of attorney, wills, and deeds. We handle domestic and international document certification, apostille and consular legalization, and ensure all notarial work complies with the Notaries Public Act and applicable legal requirements.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Government & Private Institutional
+                        Legal Frameworks
+                    </h3>
+
+                    <p>
+                       The firm advises businesses at every stage of their lifecycle, from incorporation and corporate governance to structuring mergers, acquisitions, and joint ventures. We handle regulatory compliance, commercial disputes, business restructuring, and cross-border transactions, ensuring that clients' operations are legally sound and strategically aligned with applicable Kenyan and international law.
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Administrative & Public Law
+                    </h3>
+
+                    <p>
+                        The firm advises and represents clients in all administrative and public law matters, from challenging unlawful decisions of public authorities through judicial review to advising on public procurement, regulatory enforcement, and devolution-related issues. We ensure that administrative actions are lawful, procedurally fair, and that the rights of individuals and institutions are fully protected.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Energy Law
+                    </h3>
+
+                    <p>
+                        The firm provides comprehensive legal services relating to energy-sector matters and applicable legal frameworks. We advise clients on regulatory compliance, project financing, and dispute resolution in the energy industry, ensuring that all activities are conducted in accordance with Kenyan and international law.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Legal & Governance Audit
+                    </h3>
+
+                    <p>
+                        The firm provides legal research, legal audit, and governance advisory services to help clients identify and mitigate legal risks, ensure compliance with applicable laws and regulations, and improve their overall governance practices.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Legal Consultancy
+                    </h3>
+
+                    <p>
+                     The firm provides comprehensive legal consultancy services, including bespoke legal opinions, risk assessment, due diligence, regulatory compliance advisory, and ongoing general counsel support. Our consultants combine legal expertise with commercial insight to deliver clear, actionable guidance tailored to the specific needs of individuals, corporations, and institutions.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Entertainment Law
+                    </h3>
+
+                    <p>
+                       The firm advises clients on all aspects of entertainment law, including the drafting and negotiation of talent, production, and distribution agreements; intellectual property protection for creative works; licensing, royalties, and revenue-sharing arrangements; and representation in disputes involving artists, producers, and media companies. We also guide clients on regulatory compliance, censorship and broadcasting regulations, and the legal structuring of entertainment ventures and intellectual property commercialization.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        /* =========================================================
+   PRACTICE AREAS
+========================================================= */
+
+#practice-areas {
+    background: var(--dark);
+    color: var(--light);
+}
+
+#practice-areas > p:first-child {
+    color: #8f8f8f;
+}
+
+#practice-areas > h2 {
+    max-width: 950px;
+    margin-bottom: 30px;
+}
+
+#practice-areas > p:not(:first-child) {
+    margin-bottom: 90px;
+    color: #909090;
+}
+
+
+/* Editorial list instead of cards */
+
+.practice-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid var(--dark-line);
+}
+
+.practice-list article {
+    position: relative;
+
+    min-height: 230px;
+
+    padding: 32px 35px 35px 0;
+
+    border-bottom: 1px solid var(--dark-line);
+}
+
+.practice-list article:nth-child(even) {
+    padding-left: 35px;
+    border-left: 1px solid var(--dark-line);
+}
+
+.practice-list article::before {
+    content: "0" counter(practice);
+}
+
+.practice-list {
+    counter-reset: practice;
+}
+
+.practice-list article {
+    counter-increment: practice;
+}
+
+.practice-list article::before {
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: #666;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+}
+
+.practice-list h3 {
+    margin-bottom: 17px;
+
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+
+.practice-list p {
+    max-width: 500px;
+
+    color: #929292;
+    font-size: 0.9rem;
+}
+
+.practice-list article {
+    transition: background 0.35s ease;
+}
+
+.practice-list article:hover {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+
